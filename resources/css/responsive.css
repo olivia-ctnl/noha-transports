@@ -392,3 +392,133 @@
         font-size: 0.85rem;
     }
 }
+
+/* Footer principal */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 50px 0 35px;
+    }
+
+    .footer-content {
+        gap: 35px;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.4rem;
+    }
+
+    .footer-social h4,
+    .footer-contact h4,
+    .footer-legal h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 30px;
+    }
+
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+        font-size: 0.95rem;
+    }
+
+    .footer-social h4,
+    .footer-contact h4,
+    .footer-legal h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .social-icons {
+        gap: 12px;
+    }
+
+    .social-icon {
+        font-size: 1.4rem;
+    }
+
+    .contact-item {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+    }
+
+    .legal-link {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .footer-copyright {
+        padding: 18px 0;
+    }
+
+    .footer-copyright p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 35px 0 25px;
+    }
+
+    .footer-container,
+    .footer-copyright .footer-container {
+        padding: 0 12px;
+    }
+
+    .footer-content {
+        gap: 25px;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.9rem;
+    }
+
+    .footer-social h4,
+    .footer-contact h4,
+    .footer-legal h4 {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        font-size: 1.3rem;
+    }
+
+    .contact-item {
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+
+    .legal-link {
+        font-size: 0.9rem;
+    }
+
+    .footer-copyright {
+        padding: 15px 0;
+    }
+
+    .footer-copyright p {
+        font-size: 0.85rem;
+    }
+}
