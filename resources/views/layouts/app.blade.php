@@ -8,6 +8,9 @@
     <title>@yield('title', 'Noha Transports')</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    {{-- Pour charger le CSS des fichiers style.css et responsive.css --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -18,28 +21,6 @@
     </main>
 
     <x-footer />
-
-    {{-- CSS --}}
-    <style>
-        :root {
-            --dark-orange: #F05837;
-            --orange: #F28A30;
-            --blue: #6465A5;
-            --black: #000000;
-            --white: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--white);
-        }
-    </style>
 </body>
 
 </html>
