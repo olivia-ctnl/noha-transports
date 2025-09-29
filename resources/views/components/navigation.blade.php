@@ -15,6 +15,10 @@
                 <a href="{{ url('/#services') }}" class="nav-link">Nos services</a>
             </li>
             <li class="nav-item">
+                <a href="{{ url('/#services-livraison') }}" class="nav-link">Livraison pour les profesionnels de
+                    santé</a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ url('/#map') }}" class="nav-link">Localisation</a>
             </li>
             <li class="nav-item">
@@ -37,13 +41,17 @@
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-nav-list">
             <li class="mobile-nav-item">
-                <a href="#" class="mobile-nav-link">Accueil</a>
+                <a href="{{ url('/') }}" class="mobile-nav-link">Accueil</a>
             </li>
             <li class="mobile-nav-item">
                 <a href="#apropos" class="mobile-nav-link">Qui sommes-nous</a>
             </li>
             <li class="mobile-nav-item">
                 <a href="#services" class="mobile-nav-link">Nos services</a>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="{{ url('/#services-livraison') }}" class="mobile-nav-link">Livraison pour les profesionnels de
+                    santé</a>
             </li>
             <li class="mobile-nav-item">
                 <a href="#map" class="mobile-nav-link">Localisation</a>

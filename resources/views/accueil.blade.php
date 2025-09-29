@@ -13,7 +13,7 @@
 
 {{-- Section A propos --}}
 <div id="apropos">
-    <<section class="apropos">
+    <section class="apropos">
         <div class="apropos-container">
             <div class="apropos-content">
                 <div class="apropos-image">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        </section>
+    </section>
 </div>
 
 {{-- Section Services --}}
@@ -62,6 +62,21 @@
                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
                         alt="Livreur Noha Transports avec son camion">
                 </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{{-- Section Services Livraison --}}
+<div id="services-livraison">
+    <section class="services-livraison">
+        <div class="services-livraison-container">
+            <div class="services-livraison-content">
+                <h2 class="services-livraison-title">Services de livraison pour les professionnels de santé</h2>
+                <p class="services-livraison-description">
+                    Besoin de livrer des équipements ou des médicaments en urgence ? Noha Transports est votre partenaire logistique de confiance. Nous garantissons une prise en charge immédiate et un acheminement rapide pour que vous puissiez vous concentrer sur ce qui compte le plus : vos patients.
+                </p>
+                <a href="#" class="services-livraison-btn">Découvrez nos services</a>
             </div>
         </div>
     </section>
