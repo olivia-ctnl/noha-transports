@@ -1,7 +1,7 @@
 <nav class="navigation">
     <div class="nav-container">
         <!-- Logo -->
-        <a href="{{ url('/') }}" class="logo">Noha Transports</a>
+        <a href="{{ url('/') }}" class="logo"><img src="{{asset('images/logo.png')}}" alt="Logo" width="150"></a>
 
         <!-- Menu desktop -->
         <ul class="nav-menu">
@@ -22,7 +22,7 @@
                 <a href="{{ url('/#map') }}" class="nav-link">Localisation</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="contact-btn">
+                <a href="tel:+596696161277" class="contact-btn">
                     Contactez-nous
                     <i class="fab fa-whatsapp"></i>
                 </a>

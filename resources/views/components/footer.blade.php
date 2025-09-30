@@ -29,15 +29,17 @@
                 <h4>Contact</h4>
                 <div class="contact-item">
                     <i class="fas fa-phone contact-icon"></i>
-                    <span>Téléphone</span>
+                    <span>0696 16 12 77</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope contact-icon"></i>
-                    <span>Email</span>
+                    <span>noha.transports@hotmail.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <span>Adresse</span>
+                    <span>12 Rue des Arts et Métiers
+                        Immeubles Équinoxes
+                        97200 Fort-de-France</span>
                 </div>
             </div>
 

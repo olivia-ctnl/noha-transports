@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 768px) {
-    .hero {
+    #hero {
         height: 100vh;
         min-height: 500px;
     }
@@ -53,7 +53,7 @@
 }
 
 @media (max-width: 480px) {
-    .hero {
+    #hero {
         height: 100vh;
         min-height: 450px;
     }
@@ -80,7 +80,7 @@
 
 /* Section À propos */
 @media (max-width: 1024px) {
-    .apropos {
+    #apropos {
         padding: 60px 0;
     }
 
@@ -98,7 +98,7 @@
 }
 
 @media (max-width: 768px) {
-    .apropos {
+    #apropos {
         padding: 50px 0;
     }
 
@@ -135,7 +135,7 @@
 }
 
 @media (max-width: 480px) {
-    .apropos {
+    #apropos {
         padding: 40px 0;
     }
 
@@ -193,7 +193,7 @@
 }
 
 @media (max-width: 768px) {
-    .services {
+    #services {
         padding: 50px 0;
     }
 
@@ -239,7 +239,7 @@
 }
 
 @media (max-width: 480px) {
-    .services {
+    #services {
         padding: 40px 0;
     }
 
@@ -287,7 +287,7 @@
 
 /* Section Services pour les professionnels de santé */
 @media (max-width: 1200px) {
-    .services-livraison {
+    #services-livraison {
         padding: 90px 0;
     }
 
@@ -306,7 +306,7 @@
 }
 
 @media (max-width: 1024px) {
-    .services-livraison {
+    #services-livraison {
         padding: 80px 0;
     }
 
@@ -322,7 +322,7 @@
 }
 
 @media (max-width: 768px) {
-    .services-livraison {
+    #services-livraison {
         padding: 70px 0;
     }
 
@@ -349,7 +349,7 @@
 }
 
 @media (max-width: 480px) {
-    .services-livraison {
+    #services-livraison {
         padding: 60px 0;
     }
 
@@ -375,7 +375,7 @@
 }
 
 @media (max-width: 360px) {
-    .services-livraison {
+    #services-livraison {
         padding: 50px 0;
     }
 

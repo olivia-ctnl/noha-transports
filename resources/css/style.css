@@ -178,7 +178,7 @@ body {
 }
 
 /* Hero Section */
-.hero {
+#hero {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -194,7 +194,7 @@ body {
 }
 
 /* Overlay sombre */
-.hero::before {
+#hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -256,7 +256,7 @@ body {
 }
 
 /* Section À propos */
-.apropos {
+#apropos {
     padding: 80px 0;
     background-color: var(--white);
 }
@@ -365,7 +365,7 @@ body {
 }
 
 /* Section Services */
-.services {
+#services {
     padding: 80px 0;
     background-color: var(--white);
 }
@@ -508,7 +508,7 @@ iframe {
 }
 
 /* Section Services Livraison */
-.services-livraison {
+#services-livraison {
     background-color: var(--blue);
     padding: 100px 0;
     text-align: center;
@@ -749,6 +749,14 @@ iframe {
 
 .footer-legal {
     animation-delay: 0.3s;
+}
+
+/* Applique scroll-margin-top à toutes les ancres */
+#apropos,
+#services,
+#services-livraison,
+#map {
+    scroll-margin-top: 90px;
 }
 
 /* Page Services */
