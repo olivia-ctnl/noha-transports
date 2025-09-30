@@ -74,9 +74,11 @@
             <div class="services-livraison-content">
                 <h2 class="services-livraison-title">Services de livraison pour les professionnels de santé</h2>
                 <p class="services-livraison-description">
-                    Besoin de livrer des équipements ou des médicaments en urgence ? Noha Transports est votre partenaire logistique de confiance. Nous garantissons une prise en charge immédiate et un acheminement rapide pour que vous puissiez vous concentrer sur ce qui compte le plus : vos patients.
+                    Besoin de livrer des équipements ou des médicaments en urgence ? Noha Transports est votre
+                    partenaire logistique de confiance. Nous garantissons une prise en charge immédiate et un
+                    acheminement rapide pour que vous puissiez vous concentrer sur ce qui compte le plus : vos patients.
                 </p>
-                <a href="#" class="services-livraison-btn">Découvrez nos services</a>
+                <a href="{{ url('/services') }}" class="services-livraison-btn">Découvrez nos services</a>
             </div>
         </div>
     </section>

@@ -285,7 +285,7 @@
     }
 }
 
-/* Services Livraison - Responsive */
+/* Section Services pour les professionnels de santé */
 @media (max-width: 1200px) {
     .services-livraison {
         padding: 90px 0;
@@ -520,5 +520,97 @@
 
     .footer-copyright p {
         font-size: 0.85rem;
+    }
+}
+
+/* Page Services */
+
+/* Hero Section Services */
+@media (max-width: 1200px) {
+    .services-hero {
+        padding: 100px 0;
+    }
+
+    .services-hero-container {
+        padding: 0 30px;
+    }
+
+    .services-hero-title {
+        font-size: 2.7rem;
+        margin-bottom: 35px;
+    }
+
+    .livraison-hero-description {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .services-hero {
+        padding: 90px 0;
+    }
+
+    .services-hero-title {
+        font-size: 2.4rem;
+        margin-bottom: 30px;
+    }
+
+    .services-hero-description {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 80px 0;
+    }
+
+    .services-hero-container {
+        padding: 0 20px;
+    }
+
+    .services-hero-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        line-height: 1.3;
+    }
+
+    .services-hero-description {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-hero {
+        padding: 60px 0;
+    }
+
+    .services-hero-container {
+        padding: 0 15px;
+    }
+
+    .services-hero-title {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+
+    .services-hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 360px) {
+    .services-hero {
+        padding: 50px 0;
+    }
+
+    .services-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .services-hero-description {
+        font-size: 0.95rem;
     }
 }

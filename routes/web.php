@@ -8,3 +8,7 @@ use App\Http\Controllers\AccueilController;
 // });
 
 Route::get('/', [App\Http\Controllers\AccueilController::class, 'index'])->name('accueil');
+
+Route::get('/services', function () {
+        return view('services');
+    })->name('services');

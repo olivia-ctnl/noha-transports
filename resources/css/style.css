@@ -17,6 +17,8 @@ body {
     background-color: var(--white);
 }
 
+/* Page Acceuil */
+
 /* Navigation principale */
 .navigation {
     background-color: var(--white);
@@ -747,4 +749,67 @@ iframe {
 
 .footer-legal {
     animation-delay: 0.3s;
+}
+
+/* Page Services */
+
+/* Hero Section Services */
+.services-hero {
+    background-color: #6465a5;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.services-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.services-hero-content {
+    color: #ffffff;
+}
+
+.services-hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-hero-description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Animation d'entrée */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services-hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.services-hero-title {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.services-hero-description {
+    animation: fadeInUp 1s ease-out 0.4s both;
 }
