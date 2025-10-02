@@ -87,7 +87,7 @@
     <div class="max-w-6xl mx-auto px-10 sm:px-6 text-center text-white animate-fadeInUp">
         <h2
             class="text-4xl md:text-3xl sm:text-2xl font-semibold mb-8 max-w-3xl mx-auto leading-snug animate-fadeInUp delay-200">
-            Services de hero pour les professionnels de santé
+            Services pour les professionnels de santé
         </h2>
         <p
             class="text-lg md:text-base sm:text-sm opacity-95 mb-10 max-w-2xl mx-auto leading-relaxed animate-fadeInUp delay-400">
