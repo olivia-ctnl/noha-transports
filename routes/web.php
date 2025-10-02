@@ -1,20 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AccueilController;
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/', [App\Http\Controllers\AccueilController::class, 'index'])->name('accueil');
+// Page d'acceuil
+Route::get('/', function () {
+    return view('accueil');
+})->name('accueil');
 
+// Pages de services pour les profesionnels de santé
 Route::get('/services', function () {
         return view('services');
-    })->name('services');
+})->name('services');
 
+// Pages légales
+// Mentions légales
 Route::view('/mentions-legales', 'legal.mentions')->name('mentions.legales');
-
+// Politique de confidentialité
 Route::view('/politique-confidentialite', 'legal.privacy')->name('politique.confidentialite');
-
+// Conditions Générales d'Utilisation
 Route::view('/conditions-utilisation', 'legal.terms')->name('conditions.utilisations');
