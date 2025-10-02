@@ -123,8 +123,8 @@
             <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm transition-transform duration-200 hover:shadow-md hover:-translate-y-1
             animate-fadeInUp">
                 <h3 class="text-xl font-bold mb-3 text-[#F28A30]">8. Vos droits (RGPD)</h3>
-                <p class="text-sm mb-2">Conformément au RGPD, vous disposez notamment du **Droit d’accès**, de
-                    **Rectification** et d’**Effacement** (droit à l’oubli).</p>
+                <p class="text-sm mb-2">Conformément au RGPD, vous disposez notamment du Droit d’accès, de Rectification
+                    et d’Effacement (droit à l’oubli).</p>
                 <p class="font-semibold text-[#6465A5] mt-3">Pour exercer vos droits :</p>
                 <a href="mailto:noha.transports@hotmail.com"
                     class="text-[#F05837] hover:text-[#F28A30] underline text-sm">noha.transports@hotmail.com</a>
@@ -149,7 +149,7 @@
 
             <h3 class="font-semibold mt-3 text-[#6465A5]">Sécurité des données</h3>
             <p class="leading-relaxed text-sm">
-                Nous mettons en œuvre des mesures techniques et organisationnelles **strictes** pour protéger vos
+                Nous mettons en œuvre des mesures techniques et organisationnelles strictes pour protéger vos
                 données personnelles contre tout accès, utilisation ou divulgation non autorisée.
             </p>
 
@@ -167,7 +167,7 @@
                     class="text-[#F05837] hover:text-[#F28A30] underline">noha.transports@hotmail.com</a>
                 <br>
                 12 Rue des Arts et Métiers
-                Immeubles Équinoxes97200 Fort-de-France
+                Immeubles Équinoxes 97200 Fort-de-France
             </p>
         </article>
 

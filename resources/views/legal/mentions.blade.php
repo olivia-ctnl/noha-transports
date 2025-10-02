@@ -20,7 +20,7 @@
                 <li><strong class="text-[#6465A5]">Raison Sociale :</strong> Noha Transports</li>
                 <li><strong class="text-[#6465A5]">Capital :</strong> [Montant en €]</li>
                 <li><strong class="text-[#6465A5]">Siège Social :</strong> 12 Rue des Arts et Métiers
-                    Immeubles Équinoxes97200 Fort-de-France</li>
+                    Immeubles Équinoxes 97200 Fort-de-France</li>
                 <li><strong class="text-[#6465A5]">SIRET / RCS :</strong> [Numéro SIRET] / [Ville + numéro RCS]</li>
                 <li><strong class="text-[#6465A5]">Contact :</strong>
                     <a href="mailto:noha.transports@hotmail.com"
@@ -62,7 +62,7 @@
                 </p>
                 <p>
                     <span class="font-medium text-[#6465A5]">Adresse postale :</span> 12 Rue des Arts et Métiers
-                    Immeubles Équinoxes97200 Fort-de-France
+                    Immeubles Équinoxes 97200 Fort-de-France
                 </p>
             </div>
         </article>

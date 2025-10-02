@@ -21,7 +21,7 @@
             <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">1. Objet des CGU</h2>
             <p class="leading-relaxed">
                 Les présentes Conditions Générales d’Utilisation (CGU) définissent les modalités d’accès et
-                d’utilisation du site internet et des services proposés par;Noha Transports, intermédiaire entre les
+                d’utilisation du site internet et des services proposés par Noha Transports, intermédiaire entre les
                 professionnels de santé et les citoyens pour la prise en charge d’ordonnances et la livraison de
                 médicaments à domicile.
             </p>
