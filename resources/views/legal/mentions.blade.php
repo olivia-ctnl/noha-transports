@@ -57,7 +57,7 @@
             <div class="mt-2 ml-0">
                 <p>
                     <span class="font-medium text-[#6465A5]">Email dédié :</span> <a
-                        href="mailto:[Adresse email dédiée RGPD]"
+                        href="mailto:noha.transports@hotmail.com"
                         class="text-[#F05837] hover:text-[#F28A30] underline">noha.transports@hotmail.com</a>
                 </p>
                 <p>
