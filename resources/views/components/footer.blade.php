@@ -46,9 +46,12 @@
             {{-- Section Pages légales --}}
             <div class="animate-fadeInUp delay-600">
                 <h4 class="text-lg sm:text-base font-semibold mb-4">Pages légales</h4>
-                <a href="#" class="block text-base sm:text-sm mb-2 hover:opacity-70">Mentions légales</a>
-                <a href="#" class="block text-base sm:text-sm mb-2 hover:opacity-70">Politique de confidentialité</a>
-                <a href="#" class="block text-base sm:text-sm hover:opacity-70">Conditions Générales d'Utilisation</a>
+                <a href="{{ route('mentions.legales') }}"
+                    class="block text-base sm:text-sm mb-2 hover:opacity-70">Mentions légales</a>
+                <a href="{{ route('politique.confidentialite') }}"
+                    class="block text-base sm:text-sm mb-2 hover:opacity-70">Politique de confidentialité</a>
+                <a href="{{ route('conditions.utilisations') }}"
+                    class="block text-base sm:text-sm hover:opacity-70">Conditions Générales d'Utilisation</a>
             </div>
 
         </div>
