@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    {{-- Pour charger le CSS des fichiers style.css et responsive.css --}}
+    {{-- Permet d'activer le CSS (TailwindCSS) et le JS--}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -21,6 +21,73 @@
     </main>
 
     <x-footer />
+
+    {{-- Animations --}}
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .animate-fadeInLeft {
+            animation: fadeInLeft 0.8s ease-out both;
+        }
+
+        .animate-fadeInRight {
+            animation: fadeInRight 0.8s ease-out both;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+    </style>
 </body>
 
 </html>
