@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PharmacieController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -23,3 +24,6 @@ Route::view('/mentions-legales', 'legal.mentions')->name('mentions.legales');
 Route::view('/politique-confidentialite', 'legal.privacy')->name('politique.confidentialite');
 // Conditions Générales d'Utilisation
 Route::view('/conditions-utilisation', 'legal.terms')->name('conditions.utilisations');
+
+// Annuaire des pharmacies
+Route::get('/annuaire', [PharmacieController::class, 'annuaire'])->name('annuaire');

@@ -83,7 +83,7 @@
 </section>
 
 {{-- Services Hero pour les profesionnels de santé --}}
-<section id="services-livraison" class="bg-[#6465a5] py-28 md:py-24 sm:py-20">
+<section id="services-sante" class="bg-[#6465a5] py-28 md:py-24 sm:py-20">
     <div class="max-w-6xl mx-auto px-10 sm:px-6 text-center text-white animate-fadeInUp">
         <h2
             class="text-4xl md:text-3xl sm:text-2xl font-semibold mb-8 max-w-3xl mx-auto leading-snug animate-fadeInUp delay-200">

@@ -12,10 +12,12 @@
             </li>
             <li><a href="{{ url('/#services') }}" class="text-black hover:text-[#6465a5] font-medium">Nos services</a>
             </li>
-            <li><a href="{{ url('/#services-livraison') }}"
-                    class="text-black hover:text-[#6465a5] font-medium">Livraison pour les professionnels de santé</a>
+            <li><a href="{{ url('/#services-sante') }}" class="text-black hover:text-[#6465a5] font-medium">Services
+                    dédiés</a>
             </li>
             <li><a href="{{ url('/#map') }}" class="text-black hover:text-[#6465a5] font-medium">Localisation</a></li>
+            <li><a href="{{ url('/annuaire') }}" class="text-black hover:text-[#6465a5] font-medium">Annuaire</a>
+            </li>
             <li>
                 <a href="tel:+596696161277"
                     class="bg-[#f05837] hover:bg-[#f28a30] text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2">
@@ -39,10 +41,12 @@
             <li><a href="{{ url('/') }}" class="text-black hover:text-[#6465a5] font-medium">Accueil</a></li>
             <li><a href="#apropos" class="text-black hover:text-[#6465a5] font-medium">Qui sommes-nous</a></li>
             <li><a href="#services" class="text-black hover:text-[#6465a5] font-medium">Nos services</a></li>
-            <li><a href="{{ url('/#services-livraison') }}"
-                    class="text-black hover:text-[#6465a5] font-medium">Livraison pour les professionnels de santé</a>
+            <li><a href="{{ url('/#services-sante') }}" class="text-black hover:text-[#6465a5] font-medium">Services
+                    dédiés</a>
             </li>
             <li><a href="#map" class="text-black hover:text-[#6465a5] font-medium">Localisation</a></li>
+            <li><a href="{{ url('/annuaire') }}" class="text-black hover:text-[#6465a5] font-medium">Annuaire</a>
+            </li>
             <li>
                 <a href="tel:+596696161277"
                     class="bg-[#f05837] hover:bg-[#f28a30] text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 justify-center">
