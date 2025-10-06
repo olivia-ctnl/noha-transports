@@ -14,7 +14,7 @@ Route::get('/', function () {
 
 // Pages de services pour les profesionnels de santé
 Route::get('/services', function () {
-        return view('services');
+        return view('pages.services');
 })->name('services');
 
 // Pages légales

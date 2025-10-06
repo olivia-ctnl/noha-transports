@@ -11,6 +11,6 @@ class PharmacieController extends Controller
     public function annuaire()
     {
         $pharmacies = Pharmacie::all();
-        return view('annuaire', compact('pharmacies'));
+        return view('pages.annuaire', compact('pharmacies'));
     }
 }
