@@ -3,8 +3,9 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Contracts\View\View;
+use App\Models\Pharmacie;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
 class PharmacieCard extends Component
 {
@@ -13,7 +14,7 @@ class PharmacieCard extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(Pharmacie $pharmacie)
     {
         //
         $this->pharmacie = $pharmacie;
