@@ -16,12 +16,12 @@
 <section class="max-w-6xl mx-auto px-4 py-16">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         @foreach($pharmacies as $pharmacie)
-        <x-pharmacie-card :pharmacie="$pharmacie" class="animate-fadeInUp animate-delay-200" />
+        <x-pharmacie-card :pharmacie="$pharmacie" />
         @endforeach
     </div>
 
     @if($pharmacies->isEmpty())
-    <p class="text-center text-gray-500 my-8 animate-fadeInUp animate-delay-200">Aucune pharmacie disponible pour le
+    <p class=" text-center text-gray-500 my-8 animate-fadeInUp animate-delay-200">Aucune pharmacie disponible pour le
         moment.</p>
     @endif
 </Section>
