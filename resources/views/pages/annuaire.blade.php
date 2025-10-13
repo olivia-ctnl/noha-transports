@@ -21,7 +21,7 @@
     </div>
 
     @if($pharmacies->isEmpty())
-    <p class="text-center text-gray-500 my-8 animate-fadeInUp animate-delay-200">Aucune pharmacie disponible pour le
+    <p class=" text-center text-gray-500 my-8 animate-fadeInUp animate-delay-200">Aucune pharmacie disponible pour le
         moment.</p>
     @endif
 </Section>

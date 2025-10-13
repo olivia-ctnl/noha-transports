@@ -16,4 +16,8 @@ class Pharmacie extends Model
         'telephone',
         'horaires',
     ];
+
+    protected $casts = [
+        'horaires' => 'array',
+    ];
 }
