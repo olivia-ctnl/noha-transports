@@ -21,7 +21,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'nav_logo',
                 'type' => 'image',
-                'value' => null // À remplir plus tard
+                'value' => 'images/logo.png'
             ],
             [
                 'key' => 'nav_links',
