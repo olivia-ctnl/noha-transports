@@ -85,7 +85,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'footer_address',
                 'type' => 'text',
-                'value' => '12 Rue des Arts et Métiers<br>Immeubles Équinoxes<br>97200 Fort-de-France',
+                'value' => "12 Rue des Arts et Métiers\nImmeubles Équinoxes\n97200 Fort-de-France",
             ],
             [
                 'key' => 'footer_legal_title',
@@ -127,7 +127,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'accueil_about_description',
                 'type' => 'text',
-                'value' => 'Nous imaginons un avenir dans lequel il y a une prise en charge approfondie et durable de la personne en perte d\'autonomie.\n\nNoha Transports est une société française qui intègre pleinement le handicap dans ses infrastructures, et également dans le domaine de l\'emploi.',
+                'value' => "Nous imaginons un avenir dans lequel il y a une prise en charge approfondie et durable de la personne en perte d\'autonomie.\n\nNoha Transports est une société française qui intègre pleinement le handicap dans ses infrastructures, et également dans le domaine de l\'emploi.",
             ],
             [
                 'key' => 'accueil_about_image',
@@ -223,7 +223,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement1_description',
                 'type' => 'text',
-                'value' => 'Livraison sous 24h pour les commandes passées par les pharmacies.<br><br>Respect de la chaîne du froid (si applicable, pensez à vérifier ce point avec votre client).<br><br>Véhicules et emballages adaptés pour préserver l\'intégrité des produits.',
+                'value' => "Livraison sous 24h pour les commandes passées par les pharmacies.\n\nRespect de la chaîne du froid (si applicable, pensez à vérifier ce point avec votre client).\n\nVéhicules et emballages adaptés pour préserver l\'intégrité des produits.",
             ],
             // Card 2
             [
@@ -234,7 +234,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement2_description',
                 'type' => 'text',
-                'value' => 'Système de suivi en ligne permettant aux pharmaciens de connaître la localisation exacte de leurs livraisons.<br><br>Notifications de statut de livraison (en préparation, en cours de livraison, livrée).<br><br>Preuve de livraison avec signature électronique',
+                'value' => "Système de suivi en ligne permettant aux pharmaciens de connaître la localisation exacte de leurs livraisons.\n\nNotifications de statut de livraison (en préparation, en cours de livraison, livrée).\n\nPreuve de livraison avec signature électronique",
             ],
             // Card 3
             [
@@ -245,7 +245,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement3_description',
                 'type' => 'text',
-                'value' => 'Formation du personnel aux bonnes pratiques de distribution (BPD) pour les produits de santé.<br><br>Respect strict de la confidentialité des données et des informations médicales.<br><br>Protocole de désinfection et d\'hygiène rigoureux pour les véhicules et les livreurs.',
+                'value' => "Formation du personnel aux bonnes pratiques de distribution (BPD) pour les produits de santé.\n\nRespect strict de la confidentialité des données et des informations médicales.\n\nProtocole de désinfection et d\'hygiène rigoureux pour les véhicules et les livreurs.",
             ],
 
             // Section Fonctionnement
