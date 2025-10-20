@@ -14,28 +14,32 @@ class ContentForm
     {
         return $schema
             ->components([
-                TextInput::make('key')
-                    ->label('Clé du contenu')
-                    ->required()
-                    ->unique(ignoreRecord: true),
-                Textarea::make('value')
-                    ->label('Texte')
-                    ->visible(fn($get) => $get('type') === 'text'),
-                    // ->default(null)
-                    // ->columnSpanFull(),
-                FileUpload::make('value')
-                    ->label('Image')
-                    ->image()
-                    ->directory('contents')
-                    ->visible(fn($get) => $get('type') === 'image'),
+                // Type (Type de contenu)
                 Select::make('type')
-                    ->label('Type de contenu')
+                    ->label('Type')
                     ->options([
                         'text' => 'Text',
                         'image' => 'Image'
                     ])
                     ->required()
                     ->reactive(),
+                // Clé (Identifiant unique)
+                TextInput::make('key')
+                    ->label('Clé')
+                    ->required()
+                    ->unique(ignoreRecord: true),
+                // Valeur (Texte ou Image)
+                // Texte
+                Textarea::make('value')
+                    ->label('Texte')
+                    ->maxLength(50)
+                    ->visible(fn($get) => $get('type') === 'text'),
+                // Image
+                FileUpload::make('value')
+                    ->label('Image')
+                    ->image()
+                    ->directory('contents')
+                    ->visible(fn($get) => $get('type') === 'image'),
             ]);
     }
 }
