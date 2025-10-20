@@ -7,67 +7,110 @@ use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\TextColumn;
-use Illuminate\Support\Facades\Request;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Illuminate\Support\Facades\Request;
 
 class ContentsTable
 {
     public static function configure(Table $table): Table
     {
-        // 1. Récupérer le type de contenu de l'URL (ajouté par ContentResource)
         $contentType = Request::query('content_type');
-
-        // 2. Déterminer si la colonne Image doit être visible
         $showImageColumn = ($contentType === 'image');
 
         return $table
-
             ->columns([
-                ImageColumn::make('image_preview') // Nom de colonne unique/virtuel
-                ->state(function ($record) {
-                    $value = $record->value;
-                        
-                        // Si le chemin est déjà une URL complète (CDN), on le retourne tel quel.
+                
+                ImageColumn::make('image_preview')
+                    ->state(function ($record) {
+                        $value = $record->value;
                         if (str_starts_with($value, 'http')) {
                             return $value;
                         }
-                        
-                        // Si ce n'est pas une URL (chemin local):
-                        // 1. Supprimer le slash initial au cas où il serait stocké (ex: /images/logo.png devient images/logo.png)
                         $cleanPath = ltrim($value, '/');
-
-                        // 2. Utiliser asset() pour garantir l'URL absolue correcte pointant vers le dossier public.
                         return asset($cleanPath);
-                })
+                    })
                     ->label('Miniature')
                     ->square()
                     ->height(50)
-                    // Conditionner l'affichage de la colonne entière
                     ->visible($showImageColumn),
-                TextColumn::make('key')
-                    ->label('Clé')
+                TextColumn::make('category')
+                    ->label('Catégorie')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'Composant' => 'success',
+                        'Page' => 'info',
+                        default => 'gray',
+                    })
+                    ->sortable(),
+                
+                TextColumn::make('page')
+                    ->label('Page / Composant')
                     ->searchable()
-                    ->copyable(),
+                    ->sortable(),
+                
+                TextColumn::make('section')
+                    ->label('Section')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
+                TextColumn::make('label')
+                    ->label('Label')
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold'),
+                
+                TextColumn::make('key')
+                    ->label('Clé technique')
+                    ->searchable()
+                    ->copyable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                
                 TextColumn::make('type')
                     ->label('Type')
                     ->badge()
                     ->sortable(),
+                
                 TextColumn::make('value')
                     ->label('Valeur')
                     ->limit(50)
-                    ->searchable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
+                
+                TextColumn::make('description')
+                    ->label('Description')
+                    ->limit(50)
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-               //
+                SelectFilter::make('category')
+                    ->label('Catégorie')
+                    ->options([
+                        'Composant' => 'Composant',
+                        'Page' => 'Page',
+                    ]),
+                
+                SelectFilter::make('page')
+                    ->label('Page/Composant')
+                    ->options([
+                        'Navigation' => 'Navigation',
+                        'Footer' => 'Footer',
+                        'Accueil' => 'Accueil',
+                        'Services' => 'Services',
+                        'Annuaire' => 'Annuaire',
+                        'Mentions légales' => 'Mentions légales',
+                        'Politique de confidentialité' => 'Politique de confidentialité',
+                        'Conditions Générales d\'Utilisation' => 'CGU',
+                    ]),
+                
+                SelectFilter::make('type')
+                    ->label('Type de contenu')
+                    ->options([
+                        'text' => 'Texte',
+                        'image' => 'Image',
+                    ]),
             ])
+            ->defaultSort('page', 'asc')
             ->recordActions([
                 EditAction::make(),
             ])

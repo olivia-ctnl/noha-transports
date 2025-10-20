@@ -51,24 +51,22 @@ class ContentResource extends Resource
         ];
     }
 
-    // Filtrer la requête par type de contenu
     public static function getEloquentQuery(): Builder
-    {
-        $query = parent::getEloquentQuery();
-        
-        // Récupérer le paramètre 'content_type' de l'URL s'il existe
-        $contentType = Request::query('content_type');
+{
+    $query = parent::getEloquentQuery();
 
-        if ($contentType === 'text') {
-            // Filtrer pour n'afficher que les éléments de type 'text' 
-            $query->where('type', 'text');
-        } elseif ($contentType === 'image') {
-            // Filtrer pour n'afficher que les éléments de type 'image' 
-            $query->where('type', 'image');
-        }
+    $contentType = Request::get('content_type');
+    $allowedTypes = ['text', 'image'];
 
-        return $query;
+    if (in_array($contentType, $allowedTypes, true)) {
+        $query->where('type', $contentType);
     }
+
+    // Tri par défaut : catégorie, puis page, puis section
+    $query->orderBy('category')->orderBy('page')->orderBy('section');
+
+    return $query;
+}
 
     // Séparation de la navigation en deux liens distincts
     public static function getNavigationItems(): array
