@@ -222,7 +222,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'accueil_about_description',
                 'type' => 'text',
-                'value' => "Nous imaginons un avenir dans lequel il y a une prise en charge approfondie et durable de la personne en perte d'autonomie.\n\nNoha Transports est une société française qui intègre pleinement le handicap dans ses infrastructures, et également dans le domaine de l'emploi.",
+                'value' => "Nous imaginons un avenir dans lequel il y a une prise en charge approfondie et durable de la personne en perte d'autonomie.\nNoha Transports est une société française qui intègre pleinement le handicap dans ses infrastructures, et également dans le domaine de l'emploi.",
                 'category' => 'Page',
                 'page' => 'Accueil',
                 'section' => 'Qui sommes-nous',
@@ -398,7 +398,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement1_description',
                 'type' => 'text',
-                'value' => "Livraison sous 24h pour les commandes passées par les pharmacies.\n\nRespect de la chaîne du froid (si applicable, pensez à vérifier ce point avec votre client).\n\nVéhicules et emballages adaptés pour préserver l'intégrité des produits.",
+                'value' => "Livraison sous 24h pour les commandes passées par les pharmacies.\nRespect de la chaîne du froid (si applicable, pensez à vérifier ce point avec votre client).\nVéhicules et emballages adaptés pour préserver l'intégrité des produits.",
                 'category' => 'Page',
                 'page' => 'Services',
                 'section' => 'Nos engagements',
@@ -419,7 +419,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement2_description',
                 'type' => 'text',
-                'value' => "Système de suivi en ligne permettant aux pharmaciens de connaître la localisation exacte de leurs livraisons.\n\nNotifications de statut de livraison (en préparation, en cours de livraison, livrée).\n\nPreuve de livraison avec signature électronique",
+                'value' => "Système de suivi en ligne permettant aux pharmaciens de connaître la localisation exacte de leurs livraisons.\nNotifications de statut de livraison (en préparation, en cours de livraison, livrée).\nPreuve de livraison avec signature électronique",
                 'category' => 'Page',
                 'page' => 'Services',
                 'section' => 'Nos engagements',
@@ -440,7 +440,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement3_description',
                 'type' => 'text',
-                'value' => "Formation du personnel aux bonnes pratiques de distribution (BPD) pour les produits de santé.\n\nRespect strict de la confidentialité des données et des informations médicales.\n\nProtocole de désinfection et d'hygiène rigoureux pour les véhicules et les livreurs.",
+                'value' => "Formation du personnel aux bonnes pratiques de distribution (BPD) pour les produits de santé.\nRespect strict de la confidentialité des données et des informations médicales.\nProtocole de désinfection et d'hygiène rigoureux pour les véhicules et les livreurs.",
                 'category' => 'Page',
                 'page' => 'Services',
                 'section' => 'Nos engagements',
