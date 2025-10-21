@@ -26,7 +26,7 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('gestion-pharmacies')
+            ->path('admin')
             ->login()
             ->profile(isSimple: false)
             ->colors([
