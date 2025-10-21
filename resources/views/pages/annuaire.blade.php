@@ -7,7 +7,7 @@
         <div class="text-white animate-fadeInUp">
             <h1
                 class="text-4xl md:text-3xl sm:text-2xl font-semibold mb-10 md:mb-8 leading-tight max-w-4xl mx-auto animate-fadeInUp animation-delay-200">
-                Annuaire des pharmacies
+                {{ content('annuaire_hero_title') }}
             </h1>
         </div>
     </div>

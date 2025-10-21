@@ -6,7 +6,7 @@
         <div class="text-white animate-fadeInUp">
             <h1
                 class="text-4xl md:text-3xl sm:text-2xl font-semibold mb-10 md:mb-8 leading-tight max-w-4xl mx-auto animate-fadeInUp animation-delay-200">
-                Mentions légales
+                {{ content('mentions_hero_title') }}
         </div>
     </div>
 </section>
@@ -15,54 +15,56 @@
     <section class="space-y-10 text-gray-800">
         <article class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm transition-transform duration-200 hover:shadow-md hover:-translate-y-1
         animate-fadeInUp">
-            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">1. Éditeur du site</h2>
+            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">{{ content('mentions_editeur_title') }}</h2>
             <ul class="list-none space-y-2">
-                <li><strong class="text-[#6465A5]">Raison Sociale :</strong> Noha Transports</li>
-                <li><strong class="text-[#6465A5]">Capital :</strong> [Montant en €]</li>
-                <li><strong class="text-[#6465A5]">Siège Social :</strong> 12 Rue des Arts et Métiers
-                    Immeubles Équinoxes 97200 Fort-de-France</li>
-                <li><strong class="text-[#6465A5]">SIRET / RCS :</strong> [Numéro SIRET] / [Ville + numéro RCS]</li>
+                <li><strong class="text-[#6465A5]">Raison Sociale :</strong> {{
+                    content('mentions_editeur_raison_sociale') }}</li>
+                <li><strong class="text-[#6465A5]">Capital :</strong> {{ content('mentions_editeur_capital') }}</li>
+                <li><strong class="text-[#6465A5]">Siège Social :</strong> {{ content('mentions_editeur_siege_social')
+                    }}</li>
+                <li><strong class="text-[#6465A5]">SIRET / RCS :</strong> {{ content('mentions_editeur_siret') }} / {{
+                    content('mentions_editeur_rcs') }}</li>
                 <li><strong class="text-[#6465A5]">Contact :</strong>
-                    <a href="mailto:noha.transports@hotmail.com"
-                        class="text-[#F05837] hover:text-[#F28A30] underline">noha.transports@hotmail.com</a> |
-                    <a href="tel:+596696161277" class="text-[#F05837] hover:text-[#F28A30] underline">0696 16 12
-                        77</a>
+                    <a href="mailto:{{ content('mentions_editeur_email') }}"
+                        class="text-[#F05837] hover:text-[#F28A30] underline">{{ content('mentions_editeur_email')
+                        }}</a> |
+                    <a href="tel:+596{{ str_replace(' ', '', content('mentions_editeur_telephone')) }}"
+                        class="text-[#F05837] hover:text-[#F28A30] underline">{{ content('mentions_editeur_telephone')
+                        }}</a>
                 </li>
             </ul>
         </article>
 
         <article class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm transition-transform duration-200 hover:shadow-md hover:-translate-y-1
         animate-fadeInUp">
-            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">2. Activité et Mission</h2>
+            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">{{ content('mentions_activite_title') }}</h2>
             <p class="mb-3 leading-relaxed">
-                Noha Transports est spécialisée dans le transport et la logistique de médicaments. Nous agissons
-                comme intermédiaire essentiel pour faciliter la prise en charge d'ordonnances et la livraison de
-                médicaments à domicile pour les citoyens, les aidants et les professionnels de santé.
+                {{ content('mentions_activite_description') }}
             </p>
-            <p class="font-semibold text-[#6465A5]">Nos services clés :</p>
+            <p class="font-semibold text-[#6465A5]">{{ content('mentions_activite_services_subtitle') }}</p>
             <ul class="list-disc list-inside space-y-1 ml-4 text-sm md:text-base">
-                <li>Acheminement rapide des colis sous 24h.</li>
-                <li>Gestion simplifiée des prises de commande en ligne.</li>
+                @foreach(json_decode(content('mentions_activite_services_list')) as $service)
+                <li>{{ $service }}</li>
+                @endforeach
             </ul>
         </article>
 
         <article class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm transition-transform duration-200 hover:shadow-md hover:-translate-y-1
         animate-fadeInUp">
-            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">3. Protection des Données Personnelles (RGPD)</h2>
+            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">{{ content('mentions_rgpd_title') }}</h2>
             <p class="mb-4 leading-relaxed">
-                Conformément au RGPD, vos données sont collectées uniquement pour le traitement des commandes et des
-                demandes de contact. Elles ne sont pas partagées à des fins commerciales sans votre consentement.
+                {{ content('mentions_rgpd_description') }}
             </p>
-            <p class="font-semibold text-[#6465A5]">Vos droits (Accès, Rectification, Suppression) :</p>
+            <p class="font-semibold text-[#6465A5]">{{ content('mentions_rgpd_droits_subtitle') }}</p>
             <div class="mt-2 ml-0">
                 <p>
                     <span class="font-medium text-[#6465A5]">Email dédié :</span> <a
-                        href="mailto:noha.transports@hotmail.com"
-                        class="text-[#F05837] hover:text-[#F28A30] underline">noha.transports@hotmail.com</a>
+                        href="mailto:{{ content('mentions_rgpd_email') }}"
+                        class="text-[#F05837] hover:text-[#F28A30] underline">{{ content('mentions_rgpd_email') }}</a>
                 </p>
                 <p>
-                    <span class="font-medium text-[#6465A5]">Adresse postale :</span> 12 Rue des Arts et Métiers
-                    Immeubles Équinoxes 97200 Fort-de-France
+                    <span class="font-medium text-[#6465A5]">Adresse postale :</span> {{
+                    content('mentions_rgpd_adresse') }}
                 </p>
             </div>
         </article>
@@ -71,41 +73,39 @@
 
             <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm transition-transform duration-200 hover:shadow-md hover:-translate-y-1
             animate-fadeInUp">
-                <h3 class="text-xl font-bold mb-3 text-[#F28A30]">4. Propriété Intellectuelle</h3>
+                <h3 class="text-xl font-bold mb-3 text-[#F28A30]">{{ content('mentions_propriete_title') }}</h3>
                 <p class="text-sm">
-                    Tous les éléments du site (textes, images, logos, etc.) sont la propriété exclusive de Noha
-                    Transports. Toute reproduction ou utilisation non autorisée est strictement interdite.
+                    {{ content('mentions_propriete_description') }}
                 </p>
             </div>
 
             <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm transition-transform duration-200 hover:shadow-md hover:-translate-y-1
             animate-fadeInUp">
-                <h3 class="text-xl font-bold mb-3 text-[#F28A30]">5. Hébergeur</h3>
+                <h3 class="text-xl font-bold mb-3 text-[#F28A30]">{{ content('mentions_hebergeur_title') }}</h3>
                 <p class="text-sm">
-                    Le site est hébergé par : [Nom de l’hébergeur].
+                    Le site est hébergé par : {{ content('mentions_hebergeur_nom') }}.
                 </p>
                 <ul class="text-xs mt-2 list-none space-y-1">
-                    <li><strong class="text-[#6465A5]">Adresse :</strong> [Adresse complète de l’hébergeur]</li>
-                    <li><strong class="text-[#6465A5]">Contact :</strong> [Numéro de l’hébergeur]</li>
+                    <li><strong class="text-[#6465A5]">Adresse :</strong> {{ content('mentions_hebergeur_adresse') }}
+                    </li>
+                    <li><strong class="text-[#6465A5]">Contact :</strong> {{ content('mentions_hebergeur_contact') }}
+                    </li>
                 </ul>
             </div>
         </article>
 
         <article class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm transition-transform duration-200 hover:shadow-md hover:-translate-y-1
         animate-fadeInUp">
-            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">6. Responsabilité & Droit Applicable</h2>
+            <h2 class="text-2xl font-bold mb-4 text-[#F28A30]">{{ content('mentions_responsabilite_title') }}</h2>
 
-            <h3 class="font-semibold mt-3 text-[#6465A5]">Limitation de Responsabilité</h3>
+            <h3 class="font-semibold mt-3 text-[#6465A5]">{{ content('mentions_responsabilite_limitation_title') }}</h3>
             <p class="leading-relaxed text-sm">
-                Noha Transports ne peut être tenu responsable des erreurs, omissions ou dysfonctionnements techniques
-                indépendants de sa volonté, bien que nous assurions la plus grande rigueur dans la mise à jour des
-                informations.
+                {{ content('mentions_responsabilite_limitation_text') }}
             </p>
 
-            <h3 class="font-semibold mt-4 text-[#6465A5]">Droit Applicable</h3>
+            <h3 class="font-semibold mt-4 text-[#6465A5]">{{ content('mentions_responsabilite_droit_title') }}</h3>
             <p class="leading-relaxed text-sm">
-                Les présentes mentions légales sont régies par le droit français. Tout litige non résolu à l'amiable
-                sera soumis aux tribunaux français compétents.
+                {{ content('mentions_responsabilite_droit_text') }}
             </p>
         </article>
 

@@ -19,7 +19,7 @@
     @endif
 
     <div class="flex-1">
-        <h3 class="text-[#6465a5] font-semibold text-xl md:text-lg mb-4 md:mb-3 leading-snug">{{ $title }}</h3>
+        <h3 class="text-[#6465a5] font-semibold text-xl md:text-lg mb-4 md:mb-3 leading-snug">{!! $title !!}</h3>
         <div class="text-black text-base md:text-sm leading-relaxed space-y-3">
             {!! $description !!}
         </div>
