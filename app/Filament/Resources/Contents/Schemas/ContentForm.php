@@ -182,13 +182,14 @@ class ContentForm
                             ->visible(fn($get) => $get('type') === 'text')
                             ->default(fn ($record) => $record?->value) // Préremplit avec la valeur du Seeder
                             ->helperText('Texte affiché sur le site (modification du texte)'),
-                        FileUpload::make('image_value') // Renommer le champ
+                        FileUpload::make('image_value')
                             ->label('Image')
                             ->image()
+                            ->disk('public') // IMPORTANT : spécifier le disque
                             ->directory('contents')
+                            ->visibility('public') // IMPORTANT : rendre public
                             ->visible(fn($get) => $get('type') === 'image')
-                            ->default(fn ($record) => $record?->value) // Préremplit avec la valeur du Seeder
-                            ->helperText('Image affiché sur le site (modification de l\'image)'),
+                            ->helperText('Image affichée sur le site (modification de l\'image)'),
 
                     ]),
             ]);

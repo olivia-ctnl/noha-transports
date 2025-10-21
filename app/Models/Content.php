@@ -10,6 +10,7 @@ class Content extends Model
     protected $fillable = [
         'key',
         'value',
+        'image_value',
         'type',
         'category',
         'page',
@@ -37,10 +38,27 @@ class Content extends Model
         return static::where('page', $page)->get();
     }
 
-    public function setImageValueAttribute($value)
+    protected static function booted()
     {
-        // Si le champ image_value est rempli (même si c'est null, on met à jour 'value')
-        // On suppose que l'image est uploadée et que $value est le chemin du fichier.
-        $this->attributes['value'] = $value;
+    static::saving(function ($content) {
+        // Si c'est une image, vérifier si on a un nouveau fichier uploadé
+        if ($content->type === 'image') {
+            // Vérifier dans les attributs (priorité 1)
+            if (isset($content->attributes['image_value']) && $content->attributes['image_value']) {
+                $content->value = $content->attributes['image_value'];
+                unset($content->attributes['image_value']);
+            }
+            // Vérifier comme propriété (priorité 2)
+            elseif (isset($content->image_value) && $content->image_value) {
+                $content->value = $content->image_value;
+            }
+        }
+    });
     }
+
+// Accesseur pour charger la valeur d'image dans le champ image_value
+public function getImageValueAttribute()
+{
+    return $this->type === 'image' ? $this->value : null;
+}
 }

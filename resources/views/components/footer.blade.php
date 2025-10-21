@@ -66,7 +66,8 @@
 <div class="bg-[#f05837] py-5 sm:py-4">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <p class="text-white text-sm sm:text-xs">
-            {{ content('footer_copyright') }} Ce site a été créé par <a href="" target="_blank">Olivia Cantinol</a>.
+            {{ content('footer_copyright') }} Ce site a été créé par <a
+                href="https://www.linkedin.com/in/oliviacantinol" target="_blank">Olivia Cantinol</a>.
         </p>
     </div>
 </div>

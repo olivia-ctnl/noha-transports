@@ -3,7 +3,8 @@
 @section('content')
 {{-- Hero Section --}}
 <section id="hero"
-    class="relative flex items-center justify-center h-screen min-h-[500px] bg-[url('{{ content('accueil_hero_bg_image') }}')] bg-cover bg-center bg-[#f05837] animate-fadeInUp">
+    class="relative flex items-center justify-center h-screen min-h-[500px] bg-cover bg-center bg-[#f05837] animate-fadeInUp"
+    style="background-image: url('{{ content('accueil_hero_bg_image') }}');">
     <div class="absolute inset-0 bg-black opacity-60"></div>
     <div class="relative z-10 text-center text-white max-w-3xl px-4 animate-fadeInUp">
         <h1

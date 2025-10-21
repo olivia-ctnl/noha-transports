@@ -20,16 +20,9 @@ class ContentsTable
 
         return $table
             ->columns([
-                
+            
                 ImageColumn::make('image_preview')
-                    ->state(function ($record) {
-                        $value = $record->value;
-                        if (str_starts_with($value, 'http')) {
-                            return $value;
-                        }
-                        $cleanPath = ltrim($value, '/');
-                        return asset($cleanPath);
-                    })
+                    ->state(fn ($record) => content($record->key))
                     ->label('Miniature')
                     ->square()
                     ->height(50)
