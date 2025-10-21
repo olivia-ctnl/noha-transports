@@ -222,7 +222,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'accueil_about_description',
                 'type' => 'text',
-                'value' => "Nous imaginons un avenir dans lequel il y a une prise en charge approfondie et durable de la personne en perte d\'autonomie.\n\nNoha Transports est une société française qui intègre pleinement le handicap dans ses infrastructures, et également dans le domaine de l\'emploi.",
+                'value' => "Nous imaginons un avenir dans lequel il y a une prise en charge approfondie et durable de la personne en perte d'autonomie.\n\nNoha Transports est une société française qui intègre pleinement le handicap dans ses infrastructures, et également dans le domaine de l'emploi.",
                 'category' => 'Page',
                 'page' => 'Accueil',
                 'section' => 'Qui sommes-nous',
@@ -398,7 +398,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement1_description',
                 'type' => 'text',
-                'value' => "Livraison sous 24h pour les commandes passées par les pharmacies.\n\nRespect de la chaîne du froid (si applicable, pensez à vérifier ce point avec votre client).\n\nVéhicules et emballages adaptés pour préserver l\'intégrité des produits.",
+                'value' => "Livraison sous 24h pour les commandes passées par les pharmacies.\n\nRespect de la chaîne du froid (si applicable, pensez à vérifier ce point avec votre client).\n\nVéhicules et emballages adaptés pour préserver l'intégrité des produits.",
                 'category' => 'Page',
                 'page' => 'Services',
                 'section' => 'Nos engagements',
@@ -440,7 +440,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'services_engagement3_description',
                 'type' => 'text',
-                'value' => "Formation du personnel aux bonnes pratiques de distribution (BPD) pour les produits de santé.\n\nRespect strict de la confidentialité des données et des informations médicales.\n\nProtocole de désinfection et d\'hygiène rigoureux pour les véhicules et les livreurs.",
+                'value' => "Formation du personnel aux bonnes pratiques de distribution (BPD) pour les produits de santé.\n\nRespect strict de la confidentialité des données et des informations médicales.\n\nProtocole de désinfection et d'hygiène rigoureux pour les véhicules et les livreurs.",
                 'category' => 'Page',
                 'page' => 'Services',
                 'section' => 'Nos engagements',
@@ -815,32 +815,32 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'mentions_hebergeur_nom',
                 'type' => 'text',
-                'value' => '[Nom de l’hébergeur]',
+                'value' => '[Nom de l\'hébergeur]',
                 'category' => 'Page',
                 'page' => 'Mentions légales',
                 'section' => 'Hébergeur',
-                'label' => 'Nom de l’hébergeur',
-                'description' => 'Nom complet de la société d’hébergement',
+                'label' => 'Nom de l\'hébergeur',
+                'description' => 'Nom complet de la société d\'hébergement',
             ],
             [
                 'key' => 'mentions_hebergeur_adresse',
                 'type' => 'text',
-                'value' => '[Adresse complète de l’hébergeur]',
+                'value' => '[Adresse complète de l\'hébergeur]',
                 'category' => 'Page',
                 'page' => 'Mentions légales',
                 'section' => 'Hébergeur',
-                'label' => 'Adresse de l’hébergeur',
-                'description' => 'Adresse postale complète de la société d’hébergement',
+                'label' => 'Adresse de l\'hébergeur',
+                'description' => 'Adresse postale complète de la société d\'hébergement',
             ],
             [
                 'key' => 'mentions_hebergeur_contact',
                 'type' => 'text',
-                'value' => '[Numéro de l’hébergeur]',
+                'value' => '[Numéro de l\'hébergeur]',
                 'category' => 'Page',
                 'page' => 'Mentions légales',
                 'section' => 'Hébergeur',
-                'label' => 'Contact de l’hébergeur',
-                'description' => 'Numéro de téléphone ou email de contact de l’hébergeur',
+                'label' => 'Contact de l\'hébergeur',
+                'description' => 'Numéro de téléphone ou email de contact de l\'hébergeur',
             ],
 
             // Section Responsabilité et Droit Applicable
@@ -922,12 +922,12 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'privacy_intro_description',
                 'type' => 'text',
-                'value' => "La présente politique de confidentialité a pour objectif d’informer les utilisateurs de nos services sur la manière dont Noha Transports collecte, utilise, conserve et protège les données personnelles. En utilisant notre site internet et nos services, vous acceptez la présente politique.",
+                'value' => "La présente politique de confidentialité a pour objectif d'informer les utilisateurs de nos services sur la manière dont Noha Transports collecte, utilise, conserve et protège les données personnelles. En utilisant notre site internet et nos services, vous acceptez la présente politique.",
                 'category' => 'Page',
                 'page' => 'Politique de confidentialité',
                 'section' => 'Hero',
                 'label' => 'Texte introduction',
-                'description' => 'Description d’introduction à la politique de confidentialité',
+                'description' => 'Description d\'introduction à la politique de confidentialité',
             ],
 
             // Section Responsable du traitement
@@ -954,12 +954,12 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'privacy_responsable_activite',
                 'type' => 'text',
-                'value' => "Intermédiaire entre les professionnels de santé et les citoyens pour la gestion d’ordonnances et la livraison de médicaments à domicile.",
+                'value' => "Intermédiaire entre les professionnels de santé et les citoyens pour la gestion d'ordonnances et la livraison de médicaments à domicile.",
                 'category' => 'Page',
                 'page' => 'Politique de confidentialité',
                 'section' => 'Collecte des données',
                 'label' => 'Activité responsable',
-                'description' => 'Description de l’activité du responsable du traitement',
+                'description' => 'Description de l\'activité du responsable du traitement',
             ],
             [
                 'key' => 'privacy_responsable_email',
@@ -997,9 +997,9 @@ class ContentSeeder extends Seeder
                 'key' => 'privacy_donnees_list',
                 'type' => 'text',
                 'value' => json_encode([
-                    'Données d’identification : nom, prénom, adresse, téléphone, e-mail.',
+                    'Données d\'identification : nom, prénom, adresse, téléphone, e-mail.',
                     'Données de santé : informations liées aux ordonnances (strict respect du secret professionnel).',
-                    'Données de navigation : cookies, adresse IP, données techniques liées à l’utilisation du site.',
+                    'Données de navigation : cookies, adresse IP, données techniques liées à l\'utilisation du site.',
                 ]),
                 'category' => 'Page',
                 'page' => 'Politique de confidentialité',
@@ -1051,7 +1051,7 @@ class ContentSeeder extends Seeder
                 'key' => 'privacy_base_legale_list',
                 'type' => 'text',
                 'value' => json_encode([
-                    'Exécution d’un contrat (prise en charge et livraison).',
+                    'Exécution d\'un contrat (prise en charge et livraison).',
                     'Consentement (pour la collecte via cookies et formulaires).',
                     'Obligations légales en matière de santé et de transport.',
                 ]),
@@ -1077,7 +1077,7 @@ class ContentSeeder extends Seeder
                 'key' => 'privacy_conservation_list',
                 'type' => 'text',
                 'value' => json_encode([
-                    'Données clients : jusqu’à 5 ans maximum après la fin de la relation contractuelle.',
+                    'Données clients : jusqu\'à 5 ans maximum après la fin de la relation contractuelle.',
                     'Données de santé : conservées uniquement pour la durée strictement nécessaire au service rendu et traitées avec la plus grande confidentialité.',
                 ]),
                 'category' => 'Page',
@@ -1112,9 +1112,9 @@ class ContentSeeder extends Seeder
                 'key' => 'privacy_partage_list',
                 'type' => 'text',
                 'value' => json_encode([
-                    'Nos partenaires de santé (pharmacies) pour la prise en charge d’ordonnances.',
+                    'Nos partenaires de santé (pharmacies) pour la prise en charge d\'ordonnances.',
                     'Nos transporteurs pour assurer la livraison.',
-                    'Les autorités compétentes en cas d’obligation légale.',
+                    'Les autorités compétentes en cas d\'obligation légale.',
                 ]),
                 'category' => 'Page',
                 'page' => 'Politique de confidentialité',
@@ -1125,12 +1125,12 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'privacy_partage_footer',
                 'type' => 'text',
-                'value' => 'Aucune donnée n’est vendue ni transmise à des tiers à des fins commerciales.',
+                'value' => 'Aucune donnée n\'est vendue ni transmise à des tiers à des fins commerciales.',
                 'category' => 'Page',
                 'page' => 'Politique de confidentialité',
                 'section' => 'Partage des données',
                 'label' => 'Texte conclusion partage',
-                'description' => 'Texte de conclusion précisant l’absence de vente des données',
+                'description' => 'Texte de conclusion précisant l\'absence de vente des données',
             ],
 
             // Section Droits des utilisateurs
@@ -1147,7 +1147,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'privacy_droits_text',
                 'type' => 'text',
-                'value' => "Conformément au RGPD, vous disposez notamment du Droit d’accès, de Rectification et d’Effacement (droit à l’oubli).",
+                'value' => "Conformément au RGPD, vous disposez notamment du Droit d'accès, de Rectification et d'Effacement (droit à l'oubli).",
                 'category' => 'Page',
                 'page' => 'Politique de confidentialité',
                 'section' => 'Droits des utilisateurs',
@@ -1174,17 +1174,17 @@ class ContentSeeder extends Seeder
                 'page' => 'Politique de confidentialité',
                 'section' => 'Sécurité des données',
                 'label' => 'Titre cookies',
-                'description' => 'Titre de la section sur l’utilisation des cookies',
+                'description' => 'Titre de la section sur l\'utilisation des cookies',
             ],
             [
                 'key' => 'privacy_cookies_text',
                 'type' => 'text',
-                'value' => 'Notre site utilise des cookies pour améliorer l’expérience utilisateur et analyser la navigation.',
+                'value' => 'Notre site utilise des cookies pour améliorer l\'expérience utilisateur et analyser la navigation.',
                 'category' => 'Page',
                 'page' => 'Politique de confidentialité',
                 'section' => 'Sécurité des données',
                 'label' => 'Texte cookies',
-                'description' => 'Texte expliquant l’utilisation des cookies sur le site',
+                'description' => 'Texte expliquant l\'utilisation des cookies sur le site',
             ],
             [
                 'key' => 'privacy_cookies_gestion',
@@ -1250,7 +1250,7 @@ class ContentSeeder extends Seeder
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Hero',
                 'label' => 'Titre principal CGU',
-                'description' => 'Titre principal de la page Conditions Générales d’Utilisation',
+                'description' => 'Titre principal de la page Conditions Générales d\'Utilisation',
             ],
             // Section Objet des CGU
             [
@@ -1261,27 +1261,27 @@ class ContentSeeder extends Seeder
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Acceptation des conditions',
                 'label' => 'Titre objet des CGU',
-                'description' => 'Titre de la section définissant l’objet des conditions d’utilisation',
+                'description' => 'Titre de la section définissant l\'objet des conditions d\'utilisation',
             ],
             [
                 'key' => 'cgu_objet_paragraph1',
                 'type' => 'text',
-                'value' => "Les présentes Conditions Générales d’Utilisation (CGU) définissent les modalités d’accès et d’utilisation du site internet et des services proposés par Noha Transports, intermédiaire entre les professionnels de santé et les citoyens pour la prise en charge d’ordonnances et la livraison de médicaments à domicile.",
+                'value' => "Les présentes Conditions Générales d'Utilisation (CGU) définissent les modalités d'accès et d'utilisation du site internet et des services proposés par Noha Transports, intermédiaire entre les professionnels de santé et les citoyens pour la prise en charge d'ordonnances et la livraison de médicaments à domicile.",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Acceptation des conditions',
                 'label' => 'Paragraphe 1 objet',
-                'description' => 'Texte principal expliquant l’objet des CGU',
+                'description' => 'Texte principal expliquant l\'objet des CGU',
             ],
             [
                 'key' => 'cgu_objet_paragraph2',
                 'type' => 'text',
-                'value' => "En accédant au site et en utilisant nos services, l’utilisateur reconnaît avoir pris connaissance et s’engage à respecter les présentes CGU.",
+                'value' => "En accédant au site et en utilisant nos services, l'utilisateur reconnaît avoir pris connaissance et s'engage à respecter les présentes CGU.",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Acceptation des conditions',
                 'label' => 'Paragraphe 2 engagement utilisateur',
-                'description' => 'Texte stipulant l’acceptation implicite des CGU par l’utilisateur',
+                'description' => 'Texte stipulant l\'acceptation implicite des CGU par l\'utilisateur',
             ],
 
             // Section Services Proposés et Cibles
@@ -1298,7 +1298,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'cgu_services_intro',
                 'type' => 'text',
-                'value' => "L’entreprise met à disposition des utilisateurs les services suivants :",
+                'value' => "L'entreprise met à disposition des utilisateurs les services suivants :",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Utilisation du site',
@@ -1316,7 +1316,7 @@ class ContentSeeder extends Seeder
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Utilisation du site',
                 'label' => 'Liste des services',
-                'description' => 'Liste des services fournis par l’entreprise Noha Transports',
+                'description' => 'Liste des services fournis par l\'entreprise Noha Transports',
             ],
             [
                 'key' => 'cgu_services_conclusion',
@@ -1338,29 +1338,29 @@ class ContentSeeder extends Seeder
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Utilisation du site',
                 'label' => 'Titre accès au site',
-                'description' => 'Titre de la section définissant les modalités d’accès au site',
+                'description' => 'Titre de la section définissant les modalités d\'accès au site',
             ],
             [
                 'key' => 'cgu_acces_text',
                 'type' => 'text',
-                'value' => "L’accès au site est libre et gratuit pour tout utilisateur disposant d’un accès internet. Tous les frais liés à la connexion (matériel, logiciel, abonnement, etc.) restent à la charge de l’utilisateur.",
+                'value' => "L'accès au site est libre et gratuit pour tout utilisateur disposant d'un accès internet. Tous les frais liés à la connexion (matériel, logiciel, abonnement, etc.) restent à la charge de l'utilisateur.",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Utilisation du site',
                 'label' => 'Texte accès au site',
-                'description' => 'Texte expliquant les conditions d’accès au site internet',
+                'description' => 'Texte expliquant les conditions d\'accès au site internet',
             ],
 
-            // Section Responsabilités de l’utilisateur
+            // Section Responsabilités de l\'utilisateur
             [
                 'key' => 'cgu_responsibilite_utilisateur_title',
                 'type' => 'text',
-                'value' => "4. Responsabilités de l’utilisateur",
+                'value' => "4. Responsabilités de l'utilisateur",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Responsabilité',
                 'label' => 'Titre responsabilité utilisateur',
-                'description' => 'Titre de la section sur les responsabilités de l’utilisateur',
+                'description' => 'Titre de la section sur les responsabilités de l\'utilisateur',
             ],
             [
                 'key' => 'cgu_responsibilite_utilisateur_intro',
@@ -1370,7 +1370,7 @@ class ContentSeeder extends Seeder
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Responsabilité',
                 'label' => 'Texte introduction responsabilités utilisateur',
-                'description' => 'Introduction des engagements de l’utilisateur',
+                'description' => 'Introduction des engagements de l\'utilisateur',
             ],
             [
                 'key' => 'cgu_responsibilite_utilisateur_list',
@@ -1384,10 +1384,10 @@ class ContentSeeder extends Seeder
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Responsabilité',
                 'label' => 'Liste responsabilités utilisateur',
-                'description' => 'Liste des obligations et responsabilités de l’utilisateur',
+                'description' => 'Liste des obligations et responsabilités de l\'utilisateur',
             ],
 
-            // Section Responsabilités de l’entreprise
+            // Section Responsabilités de l\'entreprise
             [
                 'key' => 'cgu_responsabilite_entreprise_title',
                 'type' => 'text',
@@ -1404,27 +1404,27 @@ class ContentSeeder extends Seeder
                 'value' => json_encode([
                     "Assurer la livraison des médicaments dans les délais annoncés (24h indicatives).",
                     "Garantir la sécurité et la confidentialité des données (cf. Politique de confidentialité).",
-                    "Respecter nos valeurs de prise en charge durable des personnes en perte d’autonomie.",
+                    "Respecter nos valeurs de prise en charge durable des personnes en perte d\'autonomie.",
                 ]),
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Responsabilité',
                 'label' => 'Liste engagements entreprise',
-                'description' => 'Liste des engagements de l’entreprise envers les utilisateurs',
+                'description' => 'Liste des engagements de l\'entreprise envers les utilisateurs',
             ],
             [
                 'key' => 'cgu_responsabilite_entreprise_limitations',
                 'type' => 'text',
                 'value' => json_encode([
                     "Des retards ou impossibilités de livraison liés à un cas de force majeure.",
-                    "D’un usage non conforme des médicaments par le bénéficiaire.",
-                    "De l’indisponibilité temporaire du site (maintenance ou panne technique).",
+                    "D'un usage non conforme des médicaments par le bénéficiaire.",
+                    "De l'indisponibilité temporaire du site (maintenance ou panne technique).",
                 ]),
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Responsabilité',
                 'label' => 'Liste limitations responsabilité',
-                'description' => 'Liste des exclusions de responsabilité de l’entreprise',
+                'description' => 'Liste des exclusions de responsabilité de l\'entreprise',
             ],
 
             // Section Commandes et livraisons
@@ -1463,7 +1463,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'cgu_donnees_text',
                 'type' => 'text',
-                'value' => "Dans le cadre de l’utilisation des services, des données personnelles sont collectées et traitées. Veuillez consulter notre Politique de Confidentialité pour les détails sur la collecte et le traitement de vos données.",
+                'value' => "Dans le cadre de l'utilisation des services, des données personnelles sont collectées et traitées. Veuillez consulter notre Politique de Confidentialité pour les détails sur la collecte et le traitement de vos données.",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Responsabilité',
@@ -1495,7 +1495,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'cgu_propriete_modification',
                 'type' => 'text',
-                'value' => "L’entreprise se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés de ces modifications via le site internet.",
+                'value' => "L'entreprise se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés de ces modifications via le site internet.",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Modifications des conditions',
@@ -1505,7 +1505,7 @@ class ContentSeeder extends Seeder
             [
                 'key' => 'cgu_propriete_droit',
                 'type' => 'text',
-                'value' => "Les présentes CGU sont régies par le droit français. En cas de litige, compétence exclusive est attribuée aux tribunaux compétents du ressort du siège social de l’entreprise.",
+                'value' => "Les présentes CGU sont régies par le droit français. En cas de litige, compétence exclusive est attribuée aux tribunaux compétents du ressort du siège social de l'entreprise.",
                 'category' => 'Page',
                 'page' => 'Conditions Générales d\'Utilisation',
                 'section' => 'Modifications des conditions',
