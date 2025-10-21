@@ -102,13 +102,47 @@ class ContentsTable
                         'Politique de confidentialité' => 'Politique de confidentialité',
                         'Conditions Générales d\'Utilisation' => 'CGU',
                     ]),
+
+                    SelectFilter::make('section')
+                    ->label('Section')
+                    ->options([
+                        'Header' => 'Header',
+                        'Menu' => 'Menu',
+                        'Informations entreprise' => 'Informations entreprise',
+                        'Réseaux sociaux' => 'Réseaux sociaux',
+                        'Contact' => 'Contact',
+                        'Pages légales' => 'Pages légales',
+                        'Copyright' => 'Copyright',
+                        'Hero' => 'Hero',
+                        'Qui sommes-nous' => 'Qui sommes-nous',
+                        'Nos services' => 'Nos services',
+                        'Services dédiés' => 'Services dédiés',
+                        'Localisation' => 'Localisation',
+                        'Nos engagements' => 'Nos engagements',
+                        'Comment ça marche' => 'Comment ça marche',
+                        'Notre engagement social' => 'Notre engagement social',
+                        'Éditeur' => 'Éditeur',
+                        'Activité' => 'Activité',
+                        'RGPD' => 'RGPD',
+                        'Propriété intellectuelle' => 'Propriété intellectuelle',
+                        'Hébergeur' => 'Hébergeur',
+                        'Responsabilité' => 'Responsabilité',
+                        'Collecte des données' => 'Collecte des données',
+                        'Utilisation des données' => 'Utilisation des données',
+                        'Partage des données' => 'Partage des données',
+                        'Sécurité des données' => 'Sécurité des données',
+                        'Droits des utilisateurs' => 'Droits des utilisateurs',
+                        'Acceptation des conditions' => 'Acceptation des conditions',
+                        'Utilisation du site' => 'Utilisation du site',
+                        'Modifications des conditions' => 'Modifications des conditions',
+                    ]),
                 
                 SelectFilter::make('type')
                     ->label('Type de contenu')
                     ->options([
                         'text' => 'Texte',
                         'image' => 'Image',
-                    ]),
+                    ])
             ])
             ->defaultSort('page', 'asc')
             ->recordActions([
