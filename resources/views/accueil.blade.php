@@ -4,7 +4,7 @@
 {{-- Hero Section --}}
 <section id="hero"
     class="relative flex items-center justify-center h-screen min-h-[500px] bg-cover bg-center bg-[#f05837] animate-fadeInUp"
-    style="background-image: url('{{ content('accueil_hero_bg_image') }}');">
+    style="background-image: url('{{ content('accueil_hero_bg_image') }}');" loading="lazy">
     <div class="absolute inset-0 bg-black opacity-60"></div>
     <div class="relative z-10 text-center text-white max-w-3xl px-4 animate-fadeInUp">
         <h1
@@ -23,8 +23,8 @@
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             <!-- Image -->
             <div class="flex-1 w-full animate-fadeInLeft sm:animate-fadeInUp">
-                <img src="{{ content('accueil_about_image') }}" alt="Image de la section Qui sommes-nous"
-                    class="w-full h-auto rounded-xl object-cover aspect-[16/10]">
+                <img src="{{ content('accueil_about_image') }}" alt="Image de la section"
+                    class="w-full h-auto rounded-xl object-cover aspect-[16/10]" loading="lazy">
             </div>
             <!-- Texte -->
             <div class="flex-1 w-full animate-fadeInRight sm:animate-fadeInUp delay-200">
@@ -70,8 +70,8 @@
             </div>
             <!-- Image -->
             <div class="flex-1 w-full order-1 md:order-2 animate-fadeInRight sm:animate-fadeInUp">
-                <img src="{{ content('accueil_services_image') }}" alt="Livreur Noha Transports avec son camion"
-                    class="w-full h-auto rounded-xl object-cover aspect-[16/10]">
+                <img src="{{ content('accueil_services_image') }}" alt="Image de la section"
+                    class="w-full h-auto rounded-xl object-cover aspect-[16/10]" loading="lazy">
             </div>
         </div>
     </div>
