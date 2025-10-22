@@ -185,6 +185,11 @@ class ContentForm
                         FileUpload::make('image_value')
                             ->label('Image')
                             ->image()
+                            ->maxSize(5120) // Taille maximale de 5 Mo
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('16:9')
+                            ->imageResizeTargetWidth('1920')
+                            ->imageResizeTargetHeight('1080')
                             ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                             ->disk('public') // IMPORTANT : spécifier le disque
                             ->directory('contents')
