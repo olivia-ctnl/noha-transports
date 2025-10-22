@@ -185,6 +185,7 @@ class ContentForm
                         FileUpload::make('image_value')
                             ->label('Image')
                             ->image()
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
                             ->disk('public') // IMPORTANT : spécifier le disque
                             ->directory('contents')
                             ->visibility('public') // IMPORTANT : rendre public
