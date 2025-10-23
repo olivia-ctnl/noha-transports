@@ -1,61 +1,157 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Noha Transports
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Site web pour la société Noha Transports développée avec Laravel 12 et Filament 4, incluant un système de gestion de contenu dynamique et un annuaire de pharmacies.
 
-## About Laravel
+## Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Il s'agit d'une plateforme dédiée au transport de médicaments et aux services pour les professionnels de santé. Le projet intègre :
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   Un site vitrine public avec pages institutionnelles
+-   Un annuaire interactif des pharmacies partenaires
+-   Un système CMS (Content Management System) pour la gestion dynamique des contenus
+-   Un panneau d'administration complet via Filament
+-   Un système de mise en cache optimisé pour les performances
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Technologies utilisées
 
-## Learning Laravel
+### Backend
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   **Laravel 12** - Framework PHP moderne
+-   **Filament 4.1** - Panneau d'administration élégant et puissant
+-   **PHP 8.2+** - Langage de programmation
+-   **SQLite** - Base de données (par défaut)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Frontend
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **Tailwind CSS 4.0** - Framework CSS utility-first
+-   **Vite 7** - Build tool moderne et rapide
+-   **Blade** - Moteur de templates Laravel
+-   **Axios** - Client HTTP pour les requêtes AJAX
 
-## Laravel Sponsors
+### Outils de développement
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+-   **Laravel Pint** - Formateur de code PHP
+-   **PHPUnit** - Framework de tests unitaires
+-   **Concurrently** - Exécution simultanée de scripts NPM
 
-### Premium Partners
+## Structure du projet
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Modèles principaux
 
-## Contributing
+#### Content
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Gère le contenu dynamique du site avec :
 
-## Code of Conduct
+-   Textes éditables
+-   Images uploadables
+-   Organisation par page, section et catégorie
+-   Système de cache automatique
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### Pharmacie
 
-## Security Vulnerabilities
+Gère l'annuaire des pharmacies avec :
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   Nom, adresse et téléphone
+-   Horaires d'ouverture (format JSON)
 
-## License
+### Services
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### ContentCacheService
+
+Service de mise en cache des contenus pour optimiser les performances :
+
+-   Cache de 1 heure par défaut
+-   Invalidation automatique lors des modifications
+-   Gestion intelligente des URLs d'images
+
+### Helpers
+
+#### content()
+
+Fonction helper globale pour accéder facilement aux contenus.
+
+### Routes publiques
+
+-   `/` - Page d'accueil
+-   `/services` - Services pour professionnels de santé
+-   `/annuaire` - Annuaire des pharmacies
+-   `/mentions-legales` - Mentions légales
+-   `/politique-confidentialite` - Politique de confidentialité
+-   `/conditions-utilisation` - Conditions générales d'utilisation
+
+### Panel d'administration
+
+-   Accès au panneau Filament
+    -   Gestion des contenus (Contents)
+    -   Gestion des pharmacies (Pharmacies)
+
+## Composants Blade
+
+Le projet utilise des composants réutilisables :
+
+-   `<x-navigation>` - Menu de navigation
+-   `<x-footer>` - Pied de page
+-   `<x-card>` - Carte générique
+-   `<x-pharmacie-card>` - Carte pour afficher une pharmacie
+
+## Base de données
+
+### Tables principales
+
+**contents** - Gestion du contenu dynamique
+
+-   `key` : Identifiant unique
+-   `value` : Contenu texte ou chemin d'image
+-   `type` : Type de contenu (text, image)
+-   `category` : Catégorie du contenu
+-   `page` : Page associée
+-   `section` : Section de la page
+-   `label` : Libellé descriptif
+-   `description` : Description du champ
+
+**pharmacies** - Annuaire des pharmacies
+
+-   `nom` : Nom de la pharmacie
+-   `adresse` : Adresse complète
+-   `telephone` : Numéro de téléphone
+-   `horaires` : Horaires d'ouverture (JSON)
+
+**users** - Utilisateurs administrateurs
+
+-   Configuration standard Laravel + Filament
+
+## Fonctionnalités clés
+
+### Système de gestion de contenu
+
+-   Édition en temps réel via Filament
+-   Support texte et images
+-   Organisation hiérarchique (page > section > contenu)
+-   Mise en cache automatique
+-   Helper PHP pour accès facile dans les vues
+
+### Gestion des pharmacies
+
+-   CRUD complet via Filament
+-   Horaires flexibles (format JSON)
+-   Affichage public dans l'annuaire
+-   Composant Blade dédié
+
+### Optimisations
+
+-   Mise en cache des contenus
+-   Invalidation automatique du cache
+-   Hot-reload en développement
+-   Build optimisé pour production
+
+## Sécurité
+
+-   Authentification via Filament
+-   CSRF protection activée
+-   Session sécurisée
+-   Validation des entrées utilisateur
+-   Protection contre les injections SQL (Eloquent ORM)
+
+## Auteur
+
+Ce projet a été développé par [Olivia](https://github.com/olivia-ctnl).
