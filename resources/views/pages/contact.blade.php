@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Contact - Noha Transports')
-
 @section('content')
 {{-- Hero Section --}}
 <section class="bg-[#6465A5] py-32 md:py-24 sm:py-20 px-4 text-center">
