@@ -13,7 +13,9 @@ class ListContacts extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+            CreateAction::make()
+            // Masque l'action/le bouton dans tous les cas
+                ->hidden(true),
         ];
     }
 }

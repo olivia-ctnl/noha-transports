@@ -2,9 +2,10 @@
 
 namespace App\Filament\Resources\Contacts\Pages;
 
-use App\Filament\Resources\Contacts\ContactResource;
 use Filament\Actions;
+use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\ViewRecord;
+use App\Filament\Resources\Contacts\ContactResource;
 
 class ViewContact extends ViewRecord
 {
@@ -13,7 +14,6 @@ class ViewContact extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
-            EditAction::make(),
             DeleteAction::make(),
         ];
     }

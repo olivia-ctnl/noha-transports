@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\Contacts\Tables;
 
 use Filament\Tables\Table;
-use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\BulkActionGroup;
@@ -57,7 +56,6 @@ class ContactsTable
                     ]),
             ])
             ->recordActions([
-                EditAction::make(),
                 ViewAction::make(),
                 DeleteAction::make(),
             ])

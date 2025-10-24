@@ -40,8 +40,8 @@ class ContactForm
                             ->maxLength(20)
                             ->columnSpan(1),
                     ])
-                    ->columns(2),
-                
+                    ->columns(2)
+                    ->columnSpanFull(),
                 Section::make('Message')
                     ->schema([
                         Textarea::make('message')
@@ -50,14 +50,15 @@ class ContactForm
                             ->maxLength(5000)
                             ->rows(6)
                             ->columnSpanFull(),
-                    ]),
-                
+                    ])
+                    ->columnSpanFull(),
                 Section::make('Statut')
                     ->schema([
                         Toggle::make('is_read')
                             ->label('Marqué comme lu')
                             ->default(false),
-                    ]),
+                    ])
+                    ->columnSpanFull(),
             ]);
     }
 }
