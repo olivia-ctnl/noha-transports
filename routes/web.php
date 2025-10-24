@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PharmacieController;
 
 // Route::get('/', function () {
@@ -27,3 +28,7 @@ Route::view('/conditions-utilisation', 'legal.terms')->name('conditions.utilisat
 
 // Annuaire des pharmacies
 Route::get('/annuaire', [PharmacieController::class, 'annuaire'])->name('annuaire');
+
+// Page de contact
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
