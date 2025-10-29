@@ -45,9 +45,9 @@
 
             {{-- Bouton de contact mobile --}}
             <li>
-                <a href="tel:+596696161277"
+                <a href="{{ route('contact') }}"
                     class="bg-[#f05837] hover:bg-[#f28a30] text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 justify-center">
-                    Contactez-nous <i class="fab fa-whatsapp"></i>
+                    {{ content('nav_contact_button') }}
                 </a>
             </li>
         </ul>
