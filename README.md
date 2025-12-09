@@ -1,6 +1,6 @@
 # Noha Transports
 
-Site web pour la société Noha Transports développée avec Laravel 12 et Filament 4, incluant un système de gestion de contenu dynamique et un annuaire de pharmacies.
+Site web pour la société Noha Transports développée avec Laravel 12 et Filament 4.
 
 ## Description
 
@@ -16,141 +16,256 @@ Il s'agit d'une plateforme dédiée au transport de médicaments et aux services
 
 ### Backend
 
--   **Laravel 12** - Framework PHP moderne
--   **Filament 4.1** - Panneau d'administration élégant et puissant
--   **PHP 8.2+** - Langage de programmation
--   **SQLite** - Base de données (par défaut)
+-   **Laravel 12** - Framework PHP
+-   **Filament 4.1** - Panel d'administration
+-   **MySQL** - Base de données
+-   **PHP 8.2+**
 
 ### Frontend
 
--   **Tailwind CSS 4.0** - Framework CSS utility-first
--   **Vite 7** - Build tool moderne et rapide
+-   **Tailwind CSS 4.0** - Framework CSS
+-   **Vite 7** - Build tool
 -   **Blade** - Moteur de templates Laravel
--   **Axios** - Client HTTP pour les requêtes AJAX
+-   **Axios** - Client HTTP
 
-### Outils de développement
+## Fonctionnalités
 
--   **Laravel Pint** - Formateur de code PHP
--   **PHPUnit** - Framework de tests unitaires
--   **Concurrently** - Exécution simultanée de scripts NPM
+### 1. Système de gestion de contenu (CMS)
+
+-   Gestion des contenus textuels et images par clé
+-   Catégorisation par page et section
+-   Cache automatique pour optimisation des performances
+-   Helper global `content($key)` pour accès simplifié dans les vues
+
+### 2. Annuaire des pharmacies
+
+-   Gestion CRUD des pharmacies partenaires
+-   Informations : nom, adresse, téléphone, horaires
+-   Affichage public de l'annuaire
+
+### 3. Formulaire de contact
+
+-   Formulaire avec validation côté serveur
+-   Stockage des messages en base de données
+-   Gestion des messages via Filament (statut lu/non lu)
+-   Notifications de succès/erreur
+
+### 4. Panel d'administration Filament
+
+-   Gestion des contenus (texte et images)
+-   Gestion des pharmacies
+-   Consultation des messages de contact
+-   Interface responsive et moderne
+
+## Installation
+
+### Prérequis
+
+-   PHP 8.2 ou supérieur
+-   Composer
+-   Node.js et npm
+-   MySQL
+
+### Étapes d'installation
+
+1. **Cloner le projet**
+
+```bash
+git clone https://github.com/olivia-ctnl/noha-transports.git
+cd noha-transports
+```
+
+2. **Installer les dépendances PHP**
+
+```bash
+composer install
+```
+
+3. **Installer les dépendances JavaScript**
+
+```bash
+npm install
+```
+
+4. **Configuration de l'environnement**
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+5. **Créer la base de données MySQL**
+
+Dans votre client MySQL :
+
+```sql
+CREATE DATABASE noha_transports CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+Configurer ensuite le .env :
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=noha_transports
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+6. **Exécuter les migrations**
+
+```bash
+php artisan migrate
+```
+
+## Utilisation
+
+### Démarrage du serveur de développement
+
+**Option 1 : Commande composer personnalisée (recommandé)**
+
+```bash
+composer dev
+```
+
+Cette commande lance simultanément :
+
+-   Le serveur Laravel (port 8000)
+-   Le worker de queue
+-   Le monitoring des logs (Pail)
+-   Le serveur Vite pour le hot reload
+
+**Option 2 : Commandes séparées**
+
+```bash
+# Terminal 1 : Serveur Laravel
+php artisan serve
+
+# Terminal 2 : Vite (dev frontend)
+npm run dev
+```
+
+### Accès aux interfaces
+
+-   **Site public** : http://localhost:8000
+-   **Panel admin** : http://localhost:8000/admin
+-   **Connexion admin** : Utilisez les identifiants
 
 ## Structure du projet
 
 ### Modèles principaux
 
-#### Content
+#### `Content`
 
-Gère le contenu dynamique du site avec :
+Gestion des contenus dynamiques du site
 
--   Textes éditables
--   Images uploadables
--   Organisation par page, section et catégorie
--   Système de cache automatique
-
-#### Pharmacie
-
-Gère l'annuaire des pharmacies avec :
-
--   Nom, adresse et téléphone
--   Horaires d'ouverture (format JSON)
-
-### Services
-
-#### ContentCacheService
-
-Service de mise en cache des contenus pour optimiser les performances :
-
--   Cache de 1 heure par défaut
--   Invalidation automatique lors des modifications
--   Gestion intelligente des URLs d'images
-
-### Helpers
-
-#### content()
-
-Fonction helper globale pour accéder facilement aux contenus.
-
-### Routes publiques
-
--   `/` - Page d'accueil
--   `/services` - Services pour professionnels de santé
--   `/annuaire` - Annuaire des pharmacies
--   `/mentions-legales` - Mentions légales
--   `/politique-confidentialite` - Politique de confidentialité
--   `/conditions-utilisation` - Conditions générales d'utilisation
-
-### Panel d'administration
-
--   Accès au panneau Filament
-    -   Gestion des contenus (Contents)
-    -   Gestion des pharmacies (Pharmacies)
-
-## Composants Blade
-
-Le projet utilise des composants réutilisables :
-
--   `<x-navigation>` - Menu de navigation
--   `<x-footer>` - Pied de page
--   `<x-card>` - Carte générique
--   `<x-pharmacie-card>` - Carte pour afficher une pharmacie
-
-## Base de données
-
-### Tables principales
-
-**contents** - Gestion du contenu dynamique
-
--   `key` : Identifiant unique
--   `value` : Contenu texte ou chemin d'image
+-   `key` : Identifiant unique du contenu
+-   `value` : Valeur (texte ou chemin d'image)
 -   `type` : Type de contenu (text, image)
--   `category` : Catégorie du contenu
--   `page` : Page associée
--   `section` : Section de la page
--   `label` : Libellé descriptif
--   `description` : Description du champ
+-   `category`, `page`, `section` : Organisation hiérarchique
+-   Cache automatique via `ContentCacheService`
 
-**pharmacies** - Annuaire des pharmacies
+#### `Pharmacie`
+
+Gestion des pharmacies partenaires
 
 -   `nom` : Nom de la pharmacie
 -   `adresse` : Adresse complète
 -   `telephone` : Numéro de téléphone
 -   `horaires` : Horaires d'ouverture (JSON)
 
-**users** - Utilisateurs administrateurs
+#### `Contact`
 
--   Configuration standard Laravel + Filament
+Stockage des messages de contact
 
-## Fonctionnalités clés
+-   `nom`, `prenom` : Identité du contact
+-   `email`, `telephone` : Coordonnées
+-   `message` : Contenu du message
+-   `is_read` : Statut de lecture
 
-### Système de gestion de contenu
+### Services
 
--   Édition en temps réel via Filament
--   Support texte et images
--   Organisation hiérarchique (page > section > contenu)
--   Mise en cache automatique
--   Helper PHP pour accès facile dans les vues
+#### `ContentCacheService`
 
-### Gestion des pharmacies
+-   Mise en cache des contenus (durée : 1 heure)
+-   Méthodes : `get()`, `getAllContents()`, `clearCache()`
+-   Traitement automatique des URLs d'images
 
--   CRUD complet via Filament
--   Horaires flexibles (format JSON)
--   Affichage public dans l'annuaire
--   Composant Blade dédié
+### Helpers
 
-### Optimisations
+#### `ContentHelper.php`
 
--   Mise en cache des contenus
--   Invalidation automatique du cache
--   Hot-reload en développement
--   Build optimisé pour production
+Fonction globale `content($key, $default = null)` pour accès simplifié aux contenus dans les vues Blade.
+
+## Routes disponibles
+
+### Routes publiques
+
+-   `/` - Page d'accueil
+-   `/services` - Services pour professionnels de santé
+-   `/annuaire` - Annuaire des pharmacies
+-   `/contact` - Formulaire de contact
+-   `/mentions-legales` - Mentions légales
+-   `/politique-confidentialite` - Politique de confidentialité
+-   `/conditions-utilisation` - CGU
+
+### Routes admin
+
+-   `/admin` - Panel d'administration Filament
+
+## Configuration
+
+### Base de données
+
+Le projet utilise MySQL par défaut. Pour changer :
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=noha_transports
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Cache
+
+```env
+CACHE_STORE=database
+```
+
+### Queue
+
+```env
+QUEUE_CONNECTION=database
+```
+
+## Tests
+
+Exécuter les tests :
+
+```bash
+composer test
+```
+
+Ou directement :
+
+```bash
+php artisan test
+```
+
+## Scripts Composer personnalisés
+
+-   `composer dev` : Lance tous les services en développement
+-   `composer test` : Nettoie la config et lance les tests
 
 ## Sécurité
 
--   Authentification via Filament
--   CSRF protection activée
--   Session sécurisée
--   Validation des entrées utilisateur
--   Protection contre les injections SQL (Eloquent ORM)
+-   Validation des données côté serveur
+-   Protection CSRF sur tous les formulaires
+-   Sanitization des entrées utilisateur
+-   Gestion sécurisée des fichiers uploadés
 
 ## Auteur
 
