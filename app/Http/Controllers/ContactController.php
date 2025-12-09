@@ -25,8 +25,8 @@ class ContactController extends Controller
         $validator = Validator::make($request->all(), [
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'telephone' => 'required|string|max:20',
+            'email' => 'required|email:rfc,dns|max:255',
+            'telephone' => 'required|regex:/^[0-9]+$/|max:20',
             'message' => 'required|string|max:5000',
         ], [
             'nom.required' => 'Le nom est obligatoire.',
@@ -34,6 +34,7 @@ class ContactController extends Controller
             'email.required' => 'L\'email est obligatoire.',
             'email.email' => 'L\'email doit être valide.',
             'telephone.required' => 'Le téléphone est obligatoire.',
+            'telephone.regex' => 'Le numéro de téléphone ne doit contenir que des chiffres.',
             'message.required' => 'Le message est obligatoire.',
             'message.max' => 'Le message ne doit pas dépasser 5000 caractères.',
         ]);
